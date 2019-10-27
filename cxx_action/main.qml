@@ -14,14 +14,14 @@ Window {
         Button{
             text: "Clear"
             onClicked: {
-
+                mouse.clear()
             }
         }
         Button{
             id: save
             text: "Save"
             onClicked: {
-
+                mouse.save()
             }
         }
 
@@ -46,6 +46,7 @@ Window {
             lastY = area.mouseY
             ctx.lineTo(lastX,lastY)
             ctx.stroke()
+            mouse.add(lastX,lastY)
             mouse.test();
         }
         MouseArea{
