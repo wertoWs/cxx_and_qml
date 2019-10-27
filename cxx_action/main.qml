@@ -46,6 +46,7 @@ Window {
             lastY = area.mouseY
             ctx.lineTo(lastX,lastY)
             ctx.stroke()
+            mouse.test();
         }
         MouseArea{
             id: area
